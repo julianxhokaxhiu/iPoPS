@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		5C21BD9510B752EE001FB8B2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C21BD9410B752EE001FB8B2 /* CoreFoundation.framework */; };
+		5C2AF4920FE54CE700D91372 /* BASE.PBP in Resources */ = {isa = PBXBuildFile; fileRef = 5C2AF4900FE54CE700D91372 /* BASE.PBP */; };
+		5C40643C0FE436F5000FF786 /* iPoPS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5C40643B0FE436F5000FF786 /* iPoPS.icns */; };
+		5C45CCF40FDBD98E00886F95 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E42FB307B3F0F600E4EEF1 /* CoreData.framework */; };
+		5C45CCF50FDBD98F00886F95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		5C45CCF60FDBD98F00886F95 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		5C4BCB280FEEDB2B00EF1D01 /* PSXListOFGames.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C4BCB270FEEDB2B00EF1D01 /* PSXListOFGames.txt */; };
+		5C812FF00FD9BB5F00DB54B3 /* iPoPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C812FEF0FD9BB5F00DB54B3 /* iPoPSController.m */; };
+		5C9A946E0FE9A18C00C94205 /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A946D0FE9A18C00C94205 /* DiskArbitration.framework */; };
+		5CB53DD70FE2D085006C6AE8 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB53DD60FE2D085006C6AE8 /* DiscRecording.framework */; };
+		5CBB46AD0FEAA4920089BC0B /* KEYS.BIN in Resources */ = {isa = PBXBuildFile; fileRef = 5CBB46AC0FEAA4920089BC0B /* KEYS.BIN */; };
+		5CBD161D0FECFB1C00B33E81 /* DATA.PSP in Resources */ = {isa = PBXBuildFile; fileRef = 5CBD161C0FECFB1C00B33E81 /* DATA.PSP */; };
+		76495871186707F700D130E7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76495870186707F700D130E7 /* LICENSE */; };
+		764958731867087600D130E7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 764958721867087600D130E7 /* libz.dylib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* iPoPS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPoPS_Prefix.pch; sourceTree = "<group>"; };
+		5C21BD9410B752EE001FB8B2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5C2AF4900FE54CE700D91372 /* BASE.PBP */ = {isa = PBXFileReference; lastKnownFileType = file; path = BASE.PBP; sourceTree = "<group>"; };
+		5C40643B0FE436F5000FF786 /* iPoPS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iPoPS.icns; sourceTree = "<group>"; };
+		5C4BCB270FEEDB2B00EF1D01 /* PSXListOFGames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PSXListOFGames.txt; sourceTree = "<group>"; };
+		5C812FEE0FD9BB5F00DB54B3 /* iPoPSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPoPSController.h; sourceTree = "<group>"; };
+		5C812FEF0FD9BB5F00DB54B3 /* iPoPSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPoPSController.m; sourceTree = "<group>"; };
+		5C9A946D0FE9A18C00C94205 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		5CB53DD60FE2D085006C6AE8 /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
+		5CBB46AC0FEAA4920089BC0B /* KEYS.BIN */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = KEYS.BIN; sourceTree = "<group>"; };
+		5CBD161C0FECFB1C00B33E81 /* DATA.PSP */ = {isa = PBXFileReference; lastKnownFileType = file; path = DATA.PSP; sourceTree = "<group>"; };
+		76495870186707F700D130E7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		764958721867087600D130E7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* iPoPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPoPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				764958731867087600D130E7 /* libz.dylib in Frameworks */,
+				5C45CCF40FDBD98E00886F95 /* CoreData.framework in Frameworks */,
+				5C45CCF50FDBD98F00886F95 /* Cocoa.framework in Frameworks */,
+				5C45CCF60FDBD98F00886F95 /* AppKit.framework in Frameworks */,
+				5CB53DD70FE2D085006C6AE8 /* DiscRecording.framework in Frameworks */,
+				5C9A946E0FE9A18C00C94205 /* DiskArbitration.framework in Frameworks */,
+				5C21BD9510B752EE001FB8B2 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				764958721867087600D130E7 /* libz.dylib */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C9A946D0FE9A18C00C94205 /* DiskArbitration.framework */,
+				5CB53DD60FE2D085006C6AE8 /* DiscRecording.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				5C21BD9410B752EE001FB8B2 /* CoreFoundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* iPoPS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* iPoPS */ = {
+			isa = PBXGroup;
+			children = (
+				5CE95AA90FF63F2A0004F27B /* License */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = iPoPS;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5C812FEE0FD9BB5F00DB54B3 /* iPoPSController.h */,
+				5C812FEF0FD9BB5F00DB54B3 /* iPoPSController.m */,
+				32CA4F630368D1EE00C91783 /* iPoPS_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C4BCB270FEEDB2B00EF1D01 /* PSXListOFGames.txt */,
+				5CBD161C0FECFB1C00B33E81 /* DATA.PSP */,
+				5CBB46AC0FEAA4920089BC0B /* KEYS.BIN */,
+				5C2AF4900FE54CE700D91372 /* BASE.PBP */,
+				5C40643B0FE436F5000FF786 /* iPoPS.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CE95AA90FF63F2A0004F27B /* License */ = {
+			isa = PBXGroup;
+			children = (
+				76495870186707F700D130E7 /* LICENSE */,
+			);
+			name = License;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* iPoPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iPoPS" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPoPS;
+			productInstallPath = "$(HOME)/Applications";
+			productName = iPoPS;
+			productReference = 8D1107320486CEB800E47090 /* iPoPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPoPS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* iPoPS */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* iPoPS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				5C40643C0FE436F5000FF786 /* iPoPS.icns in Resources */,
+				5C2AF4920FE54CE700D91372 /* BASE.PBP in Resources */,
+				5CBB46AD0FEAA4920089BC0B /* KEYS.BIN in Resources */,
+				5CBD161D0FECFB1C00B33E81 /* DATA.PSP in Resources */,
+				76495871186707F700D130E7 /* LICENSE in Resources */,
+				5C4BCB280FEEDB2B00EF1D01 /* PSXListOFGames.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C812FF00FD9BB5F00DB54B3 /* iPoPSController.m in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPoPS_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = iPoPS;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iPoPS_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = iPoPS;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iPoPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPoPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
