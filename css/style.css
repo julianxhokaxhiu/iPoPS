@@ -1,0 +1,45 @@
+body{
+    background-color: #fafafa;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: 'Muli', Helvetica, Arial, sans-serif;
+}
+
+a:hover, .navbar-toolbar.navbar-default .navbar-nav>li>a:hover{
+    text-decoration: none;
+    color: #dd4b39;
+}
+
+.panel h3{
+    margin-top: 0;
+}
+
+/* NavBar */
+.navbar-toolbar.navbar-default .navbar-nav>.active>a:after{
+    border-bottom-color: #fafafa
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    font-weight: normal;
+}
+
+/* Right Column */
+.download .list-group-item-title{
+    color: #333;
+    background-color: rgba(243,243,243,0.85);
+    border-color: #ddd;
+    font-size: 16px;
+}
+
+/* Left Column */
+.about h1{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.about h2{
+    font-size: 14px;
+    text-transform: uppercase;
+}
