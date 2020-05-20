@@ -1,0 +1,82 @@
+# .appveyor.yml
+
+# Build version
+version: '1.3.0.{build}'
+
+# Use the latest available toolchain
+image: macos
+
+# fetch repository as zip archive
+shallow_clone: true
+
+# PRs do not increment the build number
+pull_requests:
+  do_not_increment_build_number: true
+
+# Build configurations
+configuration: Release
+
+# Default environment variables
+environment:
+  _IS_BUILD_CANARY: false
+  _RELEASE_NAME: iPoPS
+  _RELEASE_VERSION: v0
+
+# Prepare Cpp environment
+before_build:
+  - sh: |
+      export _APP_VERSION=`echo $APPVEYOR_BUILD_VERSION |  cut -d. -f1-3`
+      if [[ $APPVEYOR_REPO_TAG -eq "true" && ! -z $APPVEYOR_REPO_TAG_NAME ]];
+      then
+        export APPVEYOR_BUILD_VERSION="${_APP_VERSION}.0"
+        export _RELEASE_VERSION="v${APPVEYOR_BUILD_VERSION}"
+      else
+        export _RELEASE_VERSION="Canary"
+        export APPVEYOR_REPO_TAG_NAME="canary"
+        export _IS_BUILD_CANARY="true"
+      fi
+
+build_script:
+  - sh: |
+      agvtool new-marketing-version ${_APP_VERSION}
+      xcodebuild -project ${_RELEASE_NAME}.xcodeproj -scheme ${_RELEASE_NAME} -configuration $CONFIGURATION -derivedDataPath .dist
+
+after_build:
+  - sh: |
+      npm install --global create-dmg
+      cp LICENSE .dist/Build/Products/${CONFIGURATION}/license.txt
+      create-dmg .dist/Build/Products/${CONFIGURATION}/${_RELEASE_NAME}.app .dist/ || true
+      mv ".dist/${_RELEASE_NAME} ${_APP_VERSION}.dmg" .dist/${_RELEASE_NAME}.dmg
+
+# Package artifacts
+artifacts:
+  - path: .dist/${_RELEASE_NAME}.dmg
+    name: ${_RELEASE_NAME}-${_RELEASE_VERSION}
+
+# Create a GitHub release for every tag
+deploy:
+  # Deploy only when new tags are pushed
+  - provider: GitHub
+    tag: ${APPVEYOR_REPO_TAG_NAME}
+    release: ${_RELEASE_NAME}-${_RELEASE_VERSION}
+    artifact: ${_RELEASE_NAME}-${_RELEASE_VERSION}
+    auth_token:
+      secure: SXUyBqg8+wl9fn3xHV2Br0xDH65EyPAnFwJbwcg94wIesv9osQEefC3zxu9iDTUh
+    on:
+      branch: master
+      _IS_BUILD_CANARY: false
+  # Deploy on each commit
+  - provider: GitHub
+    tag: ${APPVEYOR_REPO_TAG_NAME}
+    release: ${_RELEASE_NAME}-v${APPVEYOR_BUILD_VERSION}
+    artifact: ${_RELEASE_NAME}-${_RELEASE_VERSION}
+    prerelease: true
+    force_update: true
+    auth_token:
+      secure: SXUyBqg8+wl9fn3xHV2Br0xDH65EyPAnFwJbwcg94wIesv9osQEefC3zxu9iDTUh
+    on:
+      branch: master
+      _IS_BUILD_CANARY: true
+    description: |
+      This is a canary build. Please be aware it may be prone to crashing and is NOT tested by anyone.
+      The App is NOT signed. You need to allow it to run in your Gatekeeper settings panel. Use this build AT YOUR OWN RISK!
