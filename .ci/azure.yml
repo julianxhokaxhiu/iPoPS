@@ -1,0 +1,59 @@
+# Azure Pipeline YAML file
+
+name: 1.3.0$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+    - master
+  tags:
+    include:
+    - '*'
+
+variables:
+  _IS_BUILD_CANARY: false
+  _RELEASE_NAME: iPoPS
+  _RELEASE_VERSION: v0
+  _RELEASE_CONFIGURATION: Release
+  _BUILD_VERSION: $(Build.BuildNumber)
+  _BUILD_BRANCH: $(Build.SourceBranch)
+
+pool:
+  vmImage: 'macOS-latest'
+
+steps:
+- checkout: self
+- task: PowerShell@2
+  displayName: 'Build and Package $(_RELEASE_NAME)'
+  inputs:
+    filePath: .ci/build.ps1
+- task: GitHubRelease@0
+  condition: and(eq(variables._IS_BUILD_CANARY, 'true'), not(contains(variables._BUILD_BRANCH, 'refs/pull/')))
+  displayName: 'Delete $(_RELEASE_NAME) Release (Canary)'
+  continueOnError: true
+  inputs:
+    gitHubConnection: github_ci
+    action: delete
+    tagSource: manual
+    tag: canary
+- task: GitHubRelease@0
+  condition: and(eq(variables._IS_BUILD_CANARY, 'true'), not(contains(variables._BUILD_BRANCH, 'refs/pull/')))
+  displayName: 'Create $(_RELEASE_NAME) Release (Canary)'
+  inputs:
+    gitHubConnection: github_ci
+    assets: .dist/*.dmg
+    isPreRelease: true
+    tagSource: manual
+    tag: canary
+    title: $(_RELEASE_NAME)-$(_RELEASE_VERSION)
+    releaseNotesSource: input
+    releaseNotes: |
+      This is a canary build. Please be aware it may be prone to crashing and is NOT tested by anyone.
+      The App is NOT signed. You need to allow it to run in your Gatekeeper settings panel. Use this build AT YOUR OWN RISK!
+- task: GitHubRelease@0
+  condition: and(eq(variables._IS_BUILD_CANARY, 'false'), not(contains(variables._BUILD_BRANCH, 'refs/pull/')))
+  displayName: 'Create $(_RELEASE_NAME) Release (Stable)'
+  inputs:
+    gitHubConnection: github_ci
+    assets: .dist/*.dmg
+    title: $(_RELEASE_NAME)-$(_RELEASE_VERSION)
